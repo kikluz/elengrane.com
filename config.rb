@@ -21,10 +21,10 @@ activate :syntax # code highlighting
 #end
 
 # github project pages deploy
-#activate :deploy do |deploy|
-#  deploy.method = :git
-#  deploy.build_before = true # default: false
-#end
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.build_before = true # default: false
+end
 
 # markdown settings
 set :markdown
