@@ -1,6 +1,8 @@
 // Bower
 // =====
 //= require jquery-2.1.0/jquery.js
+//= require jquery-2.1.0/jquery.slides.min.js
+//= require jquery-2.1.0/jquery.slides.js
 //= require fastclick-0.6.11/fastclick.js
 //= require magnific-popup-0.9.9/jquery.magnific-popup.js
 //= require royalslider/jquery.royalslider.js

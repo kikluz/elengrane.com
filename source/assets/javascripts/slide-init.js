@@ -1,12 +1,10 @@
 // -------------------------------------------------------------------
-// Init
+// Slide-Init
 // -------------------------------------------------------------------
 
 (function ($) {
 
-	// Init mobileMenu + options
-	$('.mobile-menu').mobileMenu();
+	// Init slide-sjow 
+	$('.slide-show').slideShow();
 
 })(jQuery);
-
-

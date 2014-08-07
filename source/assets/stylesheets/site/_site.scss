@@ -1,12 +1,19 @@
 // ------------------------------------------------------------
 // Layout
 // ------------------------------------------------------------
+.fadein { position:relative; width:1000px; height:332px; }
+.fadein img { position:absolute; left:0; top:0; }
+
+
 .site-header {
+
 	@include clearfix;
 	background-color: $white-smoke;
 	padding:1em;
 }
-.site-main{}
+.site-main img{
+
+}
 .site-footer{}
 
 
@@ -99,3 +106,8 @@
 		}
 	}
 }
+
+
+
+
+
