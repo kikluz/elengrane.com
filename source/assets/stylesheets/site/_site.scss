@@ -1,13 +1,38 @@
 // ------------------------------------------------------------
 // Layout
 // ------------------------------------------------------------
-.fadein { 
-	position:relative;
-	 max-width: 1000px;
-	 margin-right: auto;
-	 margin-left: auto;
+.hero-overflow {
+	overflow: hidden;
+
+	@include media($medium-screen) {
+		height: 400px;
 	}
-.fadein img { position:absolute; left:0; top:0; }
+
+	img {
+		width: 100%;
+		height: auto;
+		@include media($medium-screen) {
+			margin-top:-24%;  // positions viewable portion of the image
+		}
+	}
+}
+
+.fadein {
+	argin-bottom: 0px;
+	float: left;
+	width: 100%;
+
+	overflow: hidden;
+	position:relative;
+	@include media($medium-screen) {
+		height:470px;
+	}	
+}
+.fadein img {
+	position:absolute; left:0; top:0; 
+	width: 100%;
+	height: auto;
+}
 
 
 .site-header {
