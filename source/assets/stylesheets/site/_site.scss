@@ -1,7 +1,12 @@
 // ------------------------------------------------------------
 // Layout
 // ------------------------------------------------------------
-.fadein { position:relative; width:1000px; height:332px; }
+.fadein { 
+	position:relative;
+	 max-width: 1000px;
+	 margin-right: auto;
+	 margin-left: auto;
+	}
 .fadein img { position:absolute; left:0; top:0; }
 
 
