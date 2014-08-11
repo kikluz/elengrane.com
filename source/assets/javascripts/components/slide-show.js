@@ -1,35 +1,34 @@
+$(document).ready(function() {
+
 // ------------------------------------------------------------
 // slide show
 // ------------------------------------------------------------
-
-
-$(function() {
- $('.fadein :first-child').appendTo('.fadein').show();
- setInterval(function() {
-  $('.fadein :first-child').hide().appendTo('.fadein').fadeIn(2000);
- }, 4000);
-});
+ if ($(document).width() >= 640 )
+ {
+   $('.fadein :first-child').appendTo('.fadein').show();
+   setInterval(function() {
+    $('.fadein :first-child').hide().appendTo('.fadein').fadeIn(2000);
+   }, 4000);
+ }else{
+   $('.fadein :first-child').appendTo('.fadein').show();
+ }
 
 // ------------------------------------------------------------
 // style switcher jquery
 // ------------------------------------------------------------
-$(document).ready(function() {
   $('#switcher h3').click(function() {
     $('#switcher button').toggleClass('hidden');
   });
-});
+
 // ------------------------------------------------------------
 // style switcher jquery: hover
 // ------------------------------------------------------------
-$(document).ready(function(){
+
   $('#switcher h3').hover(function(){
     $(this).addClass('hover');}, function(){
       $(this).removeClass('hover');
   });
-});
 
- 
-$(document).ready(function() {
   $('#switcher-default').addClass('selected');
  
   $('#switcher button').click(function() {
@@ -40,6 +39,8 @@ $(document).ready(function() {
     $('#switcher button').removeClass('selected');
     $(this).addClass('selected');
   });
+
+
 });
 
 

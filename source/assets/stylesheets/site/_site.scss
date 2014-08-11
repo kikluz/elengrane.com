@@ -1,27 +1,30 @@
 // ------------------------------------------------------------
+// slide-show
+// ------------------------------------------------------------
+.fadein {
+
+	margin-bottom: 0px;
+	width: 100%;
+
+	@include media($medium-screen) {
+		position:relative;
+		height:420px;
+		overflow: hidden;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		display: none;
+		@include media($medium-screen) {
+			position:absolute; left:0; top:0; 
+		}
+	}
+}
+
+// ------------------------------------------------------------
 // Layout
 // ------------------------------------------------------------
-
-
-.fadein {
-	margin-bottom: 0px;
-	float: left;
-	width: 100%;
-
-	overflow: none;
-	position:relative;
-	@include media($medium-screen) {
-		overflow: hidden;
-		height:470px;
-	}	
-}
-.fadein img {
-	position:absolute; left:0; top:0; 
-	width: 100%;
-	height: auto;
-}
-
-
 .site-header {
 
 	@include clearfix;
