@@ -5,7 +5,7 @@ $(document).ready(function() {
 // ------------------------------------------------------------
 
  // show first image no matter what
- $('#hero-overflow :first-child').appendTo('#hero-overflow').show();
+ $('#hero-overflow :last-child').show();
 
  // not mobile?
  if ($(document).width() >= 640 )
