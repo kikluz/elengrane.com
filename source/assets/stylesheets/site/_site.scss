@@ -1,7 +1,7 @@
 // ------------------------------------------------------------
 // slide-show
 // ------------------------------------------------------------
-.fadein {
+#hero-overflow {
 
 	margin-bottom: 0px;
 	width: 100%;
@@ -12,12 +12,14 @@
 		overflow: hidden;
 	}
 
-	img {
+	img{
 		width: 100%;
-		height: auto;
-		display: none;
+		display:none;
 		@include media($medium-screen) {
 			position:absolute; left:0; top:0; 
+		}
+		.fadein {
+			height: auto;
 		}
 	}
 }

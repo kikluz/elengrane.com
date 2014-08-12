@@ -3,14 +3,26 @@ $(document).ready(function() {
 // ------------------------------------------------------------
 // slide show
 // ------------------------------------------------------------
+
+ // show first image no matter what
+ $('#hero-overflow :first-child').appendTo('#hero-overflow').show();
+
+ // not mobile?
  if ($(document).width() >= 640 )
- {
-   $('.fadein :first-child').appendTo('.fadein').show();
+ { 
+   // every 4 seconds
    setInterval(function() {
-    $('.fadein :first-child').hide().appendTo('.fadein').fadeIn(2000);
+
+    // take bottom image
+    var imgElement = $('#hero-overflow :first-child');
+
+    // hide it & append to top of the stack
+    imgElement.hide().appendTo('#hero-overflow');
+
+    // slowly fade in (2 seconds)
+    imgElement.fadeIn(2000);
+
    }, 4000);
- }else{
-   $('.fadein :first-child').appendTo('.fadein').show();
  }
 
 // ------------------------------------------------------------
