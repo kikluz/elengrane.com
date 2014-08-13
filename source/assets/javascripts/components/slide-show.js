@@ -5,25 +5,21 @@ $(document).ready(function() {
 // ------------------------------------------------------------
 
  // show first image no matter what
- $('#hero-overflow :last-child').show();
+$('#hero-overflow :last-child').show();
 
- // not mobile?
- if ($(document).width() >= 640 )
- { 
-   // every 4 seconds
-   setInterval(function() {
+setInterval(function() {
 
-    // take bottom image
-    var imgElement = $('#hero-overflow :first-child');
+  // take bottom image
+  var imgElement = $('#hero-overflow :first-child');
 
-    // hide it & append to top of the stack
-    imgElement.hide().appendTo('#hero-overflow');
+  // hide it & append to top of the stack
+  imgElement.hide().appendTo('#hero-overflow');
 
-    // slowly fade in (2 seconds)
-    imgElement.fadeIn(2000);
+  // slowly fade in (2 seconds)
+  imgElement.fadeIn(2000);
 
-   }, 4000);
- }
+}, 4000);
+
 
 // ------------------------------------------------------------
 // style switcher jquery
