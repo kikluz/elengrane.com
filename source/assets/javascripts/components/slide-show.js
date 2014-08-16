@@ -24,19 +24,21 @@ setInterval(function() {
 // ------------------------------------------------------------
 // style switcher jquery
 // ------------------------------------------------------------
-  $('#switcher h3').click(function() {
+
+  $('#switcher h3').hover(function() {
+    $(this).addClass('hover');
+  }, function() {
+    $(this).removeClass('hover');
+  });
+});
+ 
+$(document).ready(function() {
+  $('#switcher').click(function(event) {
     $('#switcher button').toggleClass('hidden');
   });
-
-// ------------------------------------------------------------
-// style switcher jquery: hover
-// ------------------------------------------------------------
-
-  $('#switcher h3').hover(function(){
-    $(this).addClass('hover');}, function(){
-      $(this).removeClass('hover');
-  });
-
+});
+ 
+$(document).ready(function() {
   $('#switcher-default').addClass('selected');
  
   $('#switcher button').click(function() {
@@ -47,8 +49,6 @@ setInterval(function() {
     $('#switcher button').removeClass('selected');
     $(this).addClass('selected');
   });
-
-
 });
 
 
