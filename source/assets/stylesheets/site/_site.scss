@@ -223,5 +223,8 @@ body.narrow .chapter {
 
 
 .accordion-menu {
+	h3 {
+		background-color: $medium-gray;
+	}
 	max-width: auto;
 }
