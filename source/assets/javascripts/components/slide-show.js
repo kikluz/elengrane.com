@@ -41,14 +41,20 @@ $(document).ready(function() {
     }
     $speech.css('fontSize', num + 'px');
   });
- // selects the second paragraph and hides it
-  $('p').eq(1).hide();
-  $('a.more').click(function(event){
-    event.preventDefault();
-    // fadeIn increasing tye opacity
-    $('p').eq(1).fadeIn('slow');
-    $(this).hide();
-  });
+    var $firstPara = $('p').eq(1);
+    $firstPara.hide();
+    $('a.more').click(function(event)
+    {
+      /// tagglling visibility
+      event.preventDefault();
+      $firstPara.slideToggle('slow');
+      var $link = $(this);
+      if ($link.text() == 'read more') {
+        $link.text('read less');
+      } else {
+        $link.text('read ,more');
+      }
+    });
 });
 
 
