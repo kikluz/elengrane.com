@@ -41,8 +41,14 @@ $(document).ready(function() {
     }
     $speech.css('fontSize', num + 'px');
   });
- 
+ // selects the second paragraph and hides it
   $('p').eq(1).hide();
+  $('a.more').click(function(event){
+    event.preventDefault();
+    // fadeIn increasing tye opacity
+    $('p').eq(1).fadeIn('slow');
+    $(this).hide();
+  });
 });
 
 
