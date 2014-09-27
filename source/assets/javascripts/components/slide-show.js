@@ -58,18 +58,36 @@ $(document).ready(function() {
     }
   });
  
-  $('div.label').click(function() {
+ $('div.label').click(function() {
     var paraWidth = $('div.speech p').outerWidth();
     var $switcher = $(this).parent();
     var switcherWidth = $switcher.outerWidth();
-    $switcher.css({
-      position: 'relative'
-    }).animate({left: paraWidth - switcherWidth}, 'slow')
-    .animate({height: '+=20px'}, 'slow')
-    .animate({borderWidth: '5px'}, 'slow');
+    $switcher
+      .css({position: 'relative'})
+      .fadeTo('fast', 0.5)
+      .animate({
+        left: paraWidth - switcherWidth
+      }, {
+        duration: 'slow',
+        queue: false
+      })
+      .fadeTo('slow', 1.0)
+      .slideUp('slow')
+      .queue(function(next) {
+        $switcher.css({backgroundColor: '#f0`'});
+        next();
+      })
+      .slideDown('slow');
   });
+  $('p').eq(2)
+    .css('border', '1px solid #333')
+    .click(function() {
+      $(this).next().slideDown('slow', function(){
+        $(this).slideUp('slow');
+      });
+    });
+    $('p').eq(3).css('backgroundColor', '#ccc').hide();
 });
-
 
 
 
