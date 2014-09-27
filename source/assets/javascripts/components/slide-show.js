@@ -24,6 +24,7 @@ setInterval(function() {
 // ------------------------------------------------------------
 // Setting computed style  property values
 // ------------------------------------------------------------
+/*
 $(document).ready(function() {
   var $speech = $('div.speech');
   var defaultSize = $speech.css('fontSize');
@@ -58,7 +59,7 @@ $(document).ready(function() {
     }
   });
  
- $('div.label').click(function() {
+  $('div.label').click(function() {
     var paraWidth = $('div.speech p').outerWidth();
     var $switcher = $(this).parent();
     var switcherWidth = $switcher.outerWidth();
@@ -72,23 +73,37 @@ $(document).ready(function() {
         queue: false
       })
       .fadeTo('slow', 1.0)
-      .slideUp('slow')
-      .queue(function(next) {
-        $switcher.css({backgroundColor: '#f0`'});
-        next();
+      .slideUp('slow', function() {
+        $switcher.css({backgroundColor: '#f00'});
       })
       .slideDown('slow');
   });
+ 
   $('p').eq(2)
     .css('border', '1px solid #333')
     .click(function() {
-      $(this).next().slideDown('slow', function(){
-        $(this).slideUp('slow');
+      var $clickedItem = $(this);
+      $clickedItem.next().slideDown('slow', function() {
+        $clickedItem.slideUp('slow');
       });
     });
-    $('p').eq(3).css('backgroundColor', '#ccc').hide();
+  $('p').eq(3).css('backgroundColor', '#ccc').hide();
 });
 
+*/
+
+// ------------------------------------------------------------
+// a romence of many dimension jquery
+// ------------------------------------------------------------
+$(document).ready(function(){
+  $('div.chapter a').attr({
+    rel: 'external',
+    title: 'Learn more at Wikipedia',
+    id: function(index, oldValue) {
+      return 'Wikilink-' + index;
+    }
+  });
+});
 
 
 // ------------------------------------------------------------
