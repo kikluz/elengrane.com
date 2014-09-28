@@ -96,13 +96,15 @@ $(document).ready(function() {
 // a romence of many dimension jquery
 // ------------------------------------------------------------
 $(document).ready(function(){
-  $('div.chapter a').attr({
-    rel: 'external',
-    title: 'Learn more at Wikipedia',
-    id: function(index, oldValue) {
-      return 'Wikilink-' + index;
-    }
-  });
+ $('div.chapter a[href*="wikipedia"]').attr({
+  rel: 'external',
+  title: function(){
+    return 'learn more about ' + $(this).text() + ' at wikipedia.';
+  },
+  id: function(index, oldValue){
+    return 'wikilink-' + index;
+  }
+ });
 });
 
 
