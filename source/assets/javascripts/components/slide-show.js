@@ -103,8 +103,16 @@ $(document).ready(function(){
       return 'Wikilink-' + index;
     }
   });
+ // Add "back to top" links.
   $('<a href="#top">back to top</a>').insertAfter('div.chapter p');
   $('<a id="top"></a>').prependTo('body');
+ 
+ // Create footnotes.
+  var $notes = $('<ol id="notes"></ol>').insertBefore('#footer');
+  $('span.footnote').each(function(index) {
+    $('<sup>' + (index + 1) + '</sup>').insertBefore(this);
+    $(this).appendTo($notes).wrap('<li></li>');
+  });
 });
 
 
