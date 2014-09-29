@@ -24,7 +24,7 @@ setInterval(function() {
 // ------------------------------------------------------------
 // Setting computed style  property values
 // ------------------------------------------------------------
-/*
+
 $(document).ready(function() {
   var $speech = $('div.speech');
   var defaultSize = $speech.css('fontSize');
@@ -90,7 +90,7 @@ $(document).ready(function() {
   $('p').eq(3).css('backgroundColor', '#ccc').hide();
 });
 
-*/
+
 
 // ------------------------------------------------------------
 // a romence of many dimension jquery
@@ -110,8 +110,19 @@ $(document).ready(function(){
  // Create footnotes.
   var $notes = $('<ol id="notes"></ol>').insertBefore('#footer');
   $('span.footnote').each(function(index) {
-    $('<sup>' + (index + 1) + '</sup>').insertBefore(this);
-    $(this).appendTo($notes).wrap('<li></li>');
+    $(this)
+      .before([
+        '<a href="#footnote-',
+        index + 1,
+        '" id="context-',
+        index + 1,
+        '" class="context">',
+        '<sup>',
+        index + 1,
+        '</sup></a>'
+      ].join(''))
+      .appendTo($notes)
+      .wrap('<li id="footnote-' + (index + 1) + '"></li>');
   });
 });
 
