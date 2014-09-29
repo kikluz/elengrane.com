@@ -87,44 +87,18 @@ $(document).ready(function() {
         $clickedItem.slideUp('slow');
       });
     });
-  $('p').eq(3).css('backgroundColor', '#ccc').hide();
+  $('p').eq(3).css('backgroundColor', '#ccc').hide(); 
 });
 
 
-
 // ------------------------------------------------------------
-// a romence of many dimension jquery
+// Using Plugin
 // ------------------------------------------------------------
 $(document).ready(function(){
-  $('div.chapter a').attr({
-    rel: 'external',
-    title: 'Learn more at Wikipedia',
-    id: function(index, oldValue) {
-      return 'Wikilink-' + index;
-    }
-  });
- // Add "back to top" links.
-  $('<a href="#top">back to top</a>').insertAfter('div.chapter p');
-  $('<a id="top"></a>').prependTo('body');
- 
- // Create footnotes.
-  var $notes = $('<ol id="notes"></ol>').insertBefore('#footer');
-  $('span.footnote').each(function(index) {
-    $(this)
-      .before([
-        '<a href="#footnote-',
-        index + 1,
-        '" id="context-',
-        index + 1,
-        '" class="context">',
-        '<sup>',
-        index + 1,
-        '</sup></a>'
-      ].join(''))
-      .appendTo($notes)
-      .wrap('<li id="footnote-' + (index + 1) + '"></li>');
-  });
+
 });
+
+
 
 
 // ------------------------------------------------------------
