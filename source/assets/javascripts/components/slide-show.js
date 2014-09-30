@@ -94,12 +94,26 @@ $(document).ready(function() {
 // ------------------------------------------------------------
 // Using Plugin
 // ------------------------------------------------------------
-$(document).ready(function(){
-  $('#books').cycle({
+$(document).ready(function() {
+  var $books = $('#books').cycle({
     timeout: 2000,
     speed: 200,
     pause: true
   });
+
+  // create a variable
+  var $controls = $('<div id="books-controls"></div>').insertAfter($books);
+  $('<button>Pause</button>').click(function(event) {
+    event.preventDefault();
+    $books.cycle('pause');
+    $.cookie('cyclePause', 'y');
+  }).appendTo($controls);
+  $('<button>Resume</button>').click(function(event) {
+    event.preventDefault();
+    $('ul:paused').cycle('resume');
+    $.cookie('cyclePause', null);
+    $books.cycle('resume');
+  }).appendTo($controls);
 });
 
 
