@@ -44,6 +44,7 @@
 // ------------------------------------------------------------
 
 .centered-navigation {
+
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
   $centered-navigation-background: #E7F1EC;
@@ -52,15 +53,15 @@
   $centered-navigation-height: 60px;
   $centered-navigation-item-padding: 1em;
   $centered-navigation-submenu-padding: 1em;
-  $centered-navigation-submenu-width: 12em;
-  $centered-navigation-item-nudge: 2.2em;
+  $centered-navigation-submenu-width: 15em;
+  $centered-navigation-item-nudge: 2.6em;
   $horizontal-bar-mode: $large-screen;
 
   background-color: $centered-navigation-background;
   border-bottom: 1px solid darken($centered-navigation-background, 6);
   font-family: $serif;
   height: $centered-navigation-height;
-  width: 100%;
+  max-width: 1000px;
   z-index: 9999;
   
   
@@ -112,7 +113,8 @@
     z-index: 999;
   }
 
-  ul.centered-navigation-menu {    
+  ul.centered-navigation-menu {
+    @include media($large-screen) {    
     -webkit-transform-style: preserve-3d; 
 // stop webkit flicker
     clear: both;
@@ -127,7 +129,7 @@
       display: block;
       text-align: center;
     }
-  }
+  }}
 
   
 // The nav items
@@ -301,7 +303,7 @@
 }
 
 
-
+/*
 .site-nav {
 	@include clearfix;
 	.navbar-brand {
@@ -385,6 +387,7 @@
 		}
 	}
 }
+*/
 
 
 
