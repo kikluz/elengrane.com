@@ -436,6 +436,9 @@ a {
 
 
 
+// ------------------------------------------------------------
+//  PARALLAX PRIMARY STRUCTURE OF NOTICIAS PAGE
+// ------------------------------------------------------------
 
 
 // setting base styles to image containers
@@ -554,7 +557,7 @@ a {
 
 
 // ------------------------------------------------------------
-//  PARALLAX PRIMARY STRUCTURE
+//  PARALLAX PRIMARY STRUCTURE OF INFO PAGE
 // ------------------------------------------------------------
 
 
@@ -637,5 +640,286 @@ section.module.parallax-3 {
     font-size: 160px;
   }
 }
+// ------------------------------------------------------------
+//  Example of mobile menu
+// ------------------------------------------------------------
+
+/* btn */
+.menu {
+  position: relative;
+  display:  inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 25px;
+}
+.menu span {
+  margin: 0 auto;
+  position: relative;
+  top: 12px;
+}
+.menu span:before, .menu span:after {
+  position: absolute;
+  content: '';
+}
+.menu span, .menu span:before, .menu span:after {
+  width: 30px;
+  height: 6px;
+  background-color: #000;
+  display: block;
+}
+.menu span:before {
+  margin-top: -12px;
+}
+.menu span:after {
+  margin-top: 12px;
+}
+/* --- btn --- */
+
+/* examples */
+
+/* example 1 */
+.example1 {
+  -webkit-transition: .2s ease;
+}
+.example1:hover {
+  -webkit-transform: rotate(90deg);
+}
+
+/* example 2 */
+.example2 span:before, .example2 span:after {
+  -webkit-transition: .2s ease;
+}
+.example2:hover span:before, .example2:hover span:after {
+  margin-top: 0px;
+}
+
+/* example 3 */
+.example3 span {
+  -webkit-transition: .2s ease 0;
+}
+.example3 span:before, .example3 span:after {
+  -webkit-transition-property: margin, opacity;
+  -webkit-transition-duration: .2s, 0;
+  -webkit-transition-delay: .2s;
+}
+.example3:hover span {
+  width: 6px;
+  -webkit-transition-delay: .2s;
+}
+.example3:hover span:before, .example3:hover span:after {
+  margin-top: 0px;
+  opacity: 0;
+  -webkit-transition-delay: 0, .2s;
+}
+
+/* example 4 */
+.example4 span {
+  -webkit-transition: .2s ease 0;
+}
+.example4 span:before, .example4 span:after {
+  -webkit-transition-property: margin, opacity;
+  -webkit-transition-duration: .2s, 0;
+  -webkit-transition-delay: .2s;
+}
+.example4:hover span {
+  -webkit-transform: rotate(90deg);
+  -webkit-transition-delay: .2s;
+}
+.example4:hover span:before, .example4:hover span:after {
+  margin-top: 0px;
+  opacity: 0;
+  -webkit-transition-delay: 0, .2s;
+}
+
+/* example 5 */
+.example5 span {
+  -webkit-transition-duration: 0s;
+  -webkit-transition-delay: .2s;
+}
+.example5:hover span {
+  background-color: rgba(0,0,0,0.0);
+  -webkit-transition-delay: .2s;
+}
+.example5 span:before {
+  -webkit-transition-property: margin, -webkit-transform;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-delay: .2s, 0;
+}
+.example5:hover span:before {
+  margin-top: 0;
+  -webkit-transform: rotate(45deg);
+  -webkit-transition-delay: 0, .2s;
+}
+.example5 span:after {
+  -webkit-transition-property: margin, -webkit-transform;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-delay: .2s, 0;
+}
+.example5:hover span:after {
+  margin-top: 0;
+  -webkit-transform: rotate(-45deg);
+  -webkit-transition-delay: 0, .2s;
+}
+
+/* example 6 */
+.example6 span {
+  -webkit-transition-duration: 0s;
+  -webkit-transition-delay: .2s;
+}
+.example6:hover span {
+  background-color: rgba(0,0,0,0.0);
+  -webkit-transition-delay: .2s;
+}
+.example6 span:before {
+  -webkit-transition-property: margin, -webkit-transform;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-delay: .2s, 0;
+  -webkit-transform-origin: 100% 100%;
+}
+.example6:hover span:before {
+  margin-top: 0;
+  -webkit-transform: rotate(22.5deg) skewX(22.5deg);
+  -webkit-transition-delay: 0, .2s;
+}
+.example6 span:after {
+  -webkit-transition-property: margin, -webkit-transform;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-delay: .2s, 0;
+  -webkit-transform-origin: 100% 0%;
+}
+.example6:hover span:after {
+  margin-top: 0;
+  -webkit-transform: rotate(-22.5deg) skewX(-22.5deg);
+  -webkit-transition-delay: 0, .2s;
+}
+
+/* example 7 */
+.example7 span {
+  -webkit-transition-duration: 0s;
+  -webkit-transition-delay: .2s;
+}
+.example7:hover span {
+  background-color: rgba(0,0,0,0.0);
+  -webkit-transition-delay: .2s;
+}
+.example7 span:before {
+  -webkit-transition-property: margin, -webkit-transform;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-delay: .2s, 0;
+  -webkit-transform-origin: 0% 100%;
+}
+.example7:hover span:before {
+  margin-top: 0;
+  -webkit-transform: rotate(22.5deg) skewX(22.5deg);
+  -webkit-transition-delay: 0, .2s;
+}
+.example7 span:after {
+  -webkit-transition-property: margin, -webkit-transform;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-delay: .2s, 0;
+  -webkit-transform-origin: 0% 0%;
+}
+.example7:hover span:after {
+  margin-top: 0;
+  -webkit-transform: rotate(-22.5deg) skewX(-22.5deg);
+  -webkit-transition-delay: 0, .2s;
+}
+
+/* example 8 */
+.example8 span {
+  -webkit-transition: .2s ease 0;
+}
+.example8 span:before, .example8 span:after {
+  -webkit-transition-property: margin, opacity;
+  -webkit-transition-duration: .2s, 0;
+  -webkit-transition-delay: .2s;
+}
+.example8:hover span {
+  width: 16px;
+  height: 16px;
+  margin-top: -5px;
+  -webkit-border-radius: 50%;
+  -webkit-transition-delay: .2s;
+}
+.example8:hover span:before, .example8:hover span:after {
+  margin-top: 0px;
+  opacity: 0;
+  -webkit-transition-delay: 0, .2s;
+}
+
+/* example 9 */
+.example9 span {
+  -webkit-transition-property: margin, width;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-delay: .2s, 0;
+}
+.example9:hover span {
+  margin-top: 6px;
+  width: 20px;
+  -webkit-transition-delay: 0, .2s;
+}
+.example9 span:after {
+  -webkit-transition-property: margin, left;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-delay: .2s, 0;
+}
+.example9:hover span:after {
+  margin-top: 6px;
+  left: -5px;
+  -webkit-transition-delay: 0, .2s;
+}
+.example9 span:before {
+  -webkit-transition-property: margin, width, left;
+  -webkit-transition-duration: .2s;
+  -webkit-transition-delay: .2s, 0, 0;
+}
+.example9:hover span:before {
+  margin-top: -6px;
+  width: 10px;
+  left: 5px;
+  -webkit-transition-delay: 0, .2s, .2s;
+}
 
 
+
+
+$dark-green: #3a693f;
+#container {
+  background: white;
+  width:100%;
+  height: auto;
+}
+.nav {
+  margin-top: 50px;
+  display: none;
+  position: relative;
+  float: right;
+}
+#mobile-menu-button {
+  cursor: pointer;
+  display: block;
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  top: 0;
+  right: .1em;
+}
+#mobile-menu-button a {
+  margin: 1em;
+  display: block; 
+  position: relative;
+}
+#mobile-menu-button a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 2em;
+  height: 0.35em;
+  background: $dark-green;
+  box-shadow: 0 0.6em 0 0 $dark-green, 0 1.2em 0 0 $dark-green;
+}
+#mobile-menu-button.active a:before {
+  background: #7bb640;
+  box-shadow: 0 0.6em 0 0 #7bb640, 0 1.2em 0 0 #7bb640;
+}
