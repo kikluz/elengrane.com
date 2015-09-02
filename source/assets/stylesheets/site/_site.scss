@@ -560,7 +560,6 @@ a {
 //  PARALLAX PRIMARY STRUCTURE OF INFO PAGE
 // ------------------------------------------------------------
 
-
 section.module:last-child {
   margin-bottom: 0;
 }
@@ -928,9 +927,6 @@ $dark-green: #3a693f;
 
 
 
-@import url(http://fonts.googleapis.com/css?family=Oswald:300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
-
 /* Override UGG site */
 #main {width: 100%; padding:0;}
 .content-asset p {margin:0 auto;}
@@ -987,4 +983,59 @@ $dark-green: #3a693f;
 }
 @media screen and (max-width: 479px) {
   #parallax-world-of-ugg .block {padding: 30px 15px; width:290px;}
+}
+
+
+// fade in on page fade in
+.section {
+  padding: 0 2em; 
+  background-color:#fff; 
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  margin-bottom: 10em;
+  h1 {
+    line-height: 1.2;
+  }
+}
+
+
+ 
+.toShow
+{
+   opacity:0; 
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 200px, 0);
+            transform: translate3d(0, 200px, 0);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+          animation-name: bounceInUp;
 }
